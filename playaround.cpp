@@ -17,7 +17,7 @@ void topKMostFrequentElements(int List[], int size, int k) {
             counter[List[i]] += 1; // once accessing a duplicated element the associated value will increment by 1, thus counting the number of each element's occurence
         }
 
-    std::priority_queue < std::pair<int, int>, std::vector< std::pair< int, int> >,  decltype(cmp)> myQueue(cmp);
+    std::priority_queue < std::pair<int, int>, std::vector< std::pair< int, int> >,  decltype(cmp) > myQueue(cmp);
 
     for(auto i = counter.begin(); i != counter.end(); i++) {
         std::cout << "Key: " << i->first << " Value: " << i->second << std::endl;
@@ -43,15 +43,5 @@ int main(int argc, char const *argv[])
 
     topKMostFrequentElements(example1, 14, 2);
  
-
-    
-
-    
-    
-
-
-
-
-
     return 0;
 }
